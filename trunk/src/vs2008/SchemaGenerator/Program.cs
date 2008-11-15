@@ -21,7 +21,7 @@ namespace SchemaGenerator
 
             GenerateData();
 
-            Console.WriteLine("Schema created successfully");
+            Console.WriteLine("Schema generator finished.");
 
             Console.ReadLine();
 
