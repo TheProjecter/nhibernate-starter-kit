@@ -41,8 +41,26 @@ namespace SchemaGenerator
             //Set up some test data
             using (ISession session = _factory.OpenSession())
             {
-                session.Save(new MyEntity {Name = "MyEntityName1"});
-                session.Save(new MyEntity {Name = "MyEntityName2"});
+                //Save venues
+                Venue venue = new Venue { Name="Main Venue"};
+                session.Save(venue);
+
+                //Save courses
+                Course course1 = new Course {CourseNumber = 1, Venue = venue};
+                Course course2 = new Course { CourseNumber = 2, Venue = venue };
+                session.Save(course1);
+                session.Save(course2);
+
+                //Save students
+                Student student1 = new Student {Name="Student 1"};
+                student1.Courses.Add(course1);
+                student1.Courses.Add(course2);
+                session.Save(student1);
+
+                Student student2 = new Student { Name = "Student 2" };
+                student2.Courses.Add(course1);
+                session.Save(student2);
+
                 session.Flush();
             }
         }
