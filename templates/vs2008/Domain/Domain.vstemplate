@@ -7,12 +7,17 @@
   </TemplateData>
   <TemplateContent>
     <Project TargetFileName="Domain.csproj" File="Domain.csproj" ReplaceParameters="true">
-      <ProjectItem ReplaceParameters="true" TargetFileName="MyEntity.cs">MyEntity.cs</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="MyEntity.hbm.xml">MyEntity.hbm.xml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Course.cs">Course.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Course.hbm.xml">Course.hbm.xml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Domain.cd">Domain.cd</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="PersistentEntity.cs">PersistentEntity.cs</ProjectItem>
       <Folder Name="Properties" TargetFolderName="Properties">
         <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
       </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Student.cs">Student.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Student.hbm.xml">Student.hbm.xml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Venue.cs">Venue.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Venue.hbm.xml">Venue.hbm.xml</ProjectItem>
     </Project>
   </TemplateContent>
 </VSTemplate>
