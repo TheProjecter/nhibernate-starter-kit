@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping default-cascade="none" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="$safeprojectname$.Venue, $safeprojectname$" table="Venue">
+    <id name="Id" type="System.Guid" column="Id" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid" />
+    </id>
+    <property name="Name" type="System.String" />
+    <bag name="Courses" cascade="all">
+      <key>
+        <column name="VenueId" />
+      </key>
+      <one-to-many class="$safeprojectname$.Course, $safeprojectname$"/>
+    </bag>
+  </class>
+</hibernate-mapping>

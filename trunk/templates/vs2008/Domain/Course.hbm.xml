@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping default-cascade="none" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="$safeprojectname$.Course, $safeprojectname$" table="Course">
+    <id name="Id" type="System.Guid" column="Id" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid" />
+    </id>
+    <property name="CourseNumber" type="System.Int32" />
+    
+    <many-to-one name="Venue" class="$safeprojectname$.Venue, $safeprojectname$">
+      <column name="VenueId" />
+    </many-to-one>
+    
+    <bag name="Students" table="StudentCourse" cascade="all">
+      <key column="CourseId" />
+      <many-to-many class="$safeprojectname$.Student, $safeprojectname$" column="StudentId" />
+    </bag>
+  </class>
+</hibernate-mapping>
