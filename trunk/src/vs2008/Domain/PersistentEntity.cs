@@ -13,12 +13,8 @@ namespace Domain
         
         public override bool Equals(object obj)
         {
-            PersistentEntity entity = obj as PersistentEntity;
-            return Equals(entity);
-        }
+            PersistentEntity other = obj as PersistentEntity;
 
-        public virtual bool Equals(PersistentEntity other)
-        {
             if (this == other)
             {
                 return true;
@@ -28,7 +24,7 @@ namespace Domain
             {
                 return false;
             }
-
+            //Transient entities will both have the same id, and as such we must check for reference equality.
             if (this.Id == Guid.Empty || other.Id == Guid.Empty)
             {
                 return ReferenceEquals(this, other);
@@ -36,7 +32,6 @@ namespace Domain
 
             return this.Id == other.Id;
         }
-
 
         public override int GetHashCode()
         {
@@ -55,7 +50,6 @@ namespace Domain
             }
 
             return Id.GetHashCode();
-
         }
     }
 }
