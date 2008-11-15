@@ -1,0 +1,24 @@
+<VSTemplate Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="ProjectGroup">
+  <TemplateData>
+    <Name>NHibernate Starter Kit</Name>
+    <Description>NHibernate in a minute</Description>
+    <ProjectType>CSharp</ProjectType>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+    <DefaultName>NHibernateStarterKit</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>    
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+      <ProjectTemplateLink>
+        Domain\Domain.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink>
+        SchemaGenerator\SchemaGenerator.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink>
+        Tests\Tests.vstemplate
+      </ProjectTemplateLink>
+    </ProjectCollection>
+  </TemplateContent>
+</VSTemplate>

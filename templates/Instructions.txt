@@ -1,0 +1,4 @@
+To create the Visual Studio installer (vsi):
+1. Zip the contents of the vs2008 folder
+2. Zip the resulting zip file with the NHibernateStarterKit.vscontent file
+3. Change the extension of the resulting zip file from .zip to .vsi

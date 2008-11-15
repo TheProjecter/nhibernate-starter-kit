@@ -1,0 +1,15 @@
+﻿<VSContent xmlns="http://schemas.microsoft.com/developer/vscontent/2005">
+  <Content>
+    <FileName>NHibernateStarterKit.zip</FileName>
+    <DisplayName>NHibernate Starter Kit</DisplayName>
+    <Description>NHibernate in one minute</Description>
+    <FileContentType>VSTemplate</FileContentType>
+    <ContentVersion>1.0</ContentVersion>    
+    <Attributes>
+      <Attribute name="TemplateType" value="Project"></Attribute>
+      <Attribute name="ProjectType" value="Visual C#"></Attribute>
+      <Attribute name="ProjectSubType" value=""></Attribute>
+      <Attribute name="lang" value="csharp"></Attribute>
+    </Attributes>
+  </Content>
+</VSContent>
